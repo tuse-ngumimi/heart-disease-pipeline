@@ -4,3 +4,6 @@
 # Ignore Python cache
 __pycache__/
 *.py[cod]
+
+# Ignore pipeline log file
+*.log

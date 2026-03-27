@@ -1,6 +1,13 @@
 import csv
 import os
 import db_connection
+import logging
+
+logging.basicConfig(
+     filename='pipeline.log',
+     level=logging.INFO,
+     format='%(asctime)s — %(levelname)s — %(message)s'
+)
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(base_dir, 'heart.csv')
@@ -79,7 +86,7 @@ db_connection.load_error_rows(error_rows)
 
 
 print()
-print('Pipeline has been completed')
-print(f'Total rows read  : {len(valid_rows) + len(error_rows)}')
-print(f'Rows loaded      : {len(valid_rows)}')
-print(f'Rows rejected    : {len(error_rows)}')
+logging.info(f'Pipeline started')
+#logging.info(f'Total rows read  {len(valid_rows) + len(error_rows)}')
+logging.info(f'Loaded {len(valid_rows)} rows')
+logging.warning(f'Rejected {len(error_rows)} rows')
