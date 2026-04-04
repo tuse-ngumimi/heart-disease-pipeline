@@ -13,7 +13,7 @@ This project processes raw CSV data, enforces strict data quality rules, and sep
 
 ## Tech Stack
 
-* **Language:** Python 3.x
+* **Language:** Python 3.13
 * **Database:** MySQL
 * **Libraries:** `mysql-connector-python`, `python-dotenv`, built-in `csv` and `os` modules.
 
@@ -31,3 +31,22 @@ This project processes raw CSV data, enforces strict data quality rules, and sep
 ```bash
 git clone https://github.com/tuse-ngumimi/health-disease-pipeline.git
 cd health-disease-pipeline
+```
+
+**2. Create a `.env` file** in the project root with your database credentials:
+```
+DB_HOST=localhost
+DB_USER=your_mysql_username
+DB_PASSWORD=your_mysql_password
+DB_NAME=heart-disease-pipeline
+```
+
+**3. Set up the database**
+
+Run the SQL scripts in your MySQL client to create and populate the tables. The schema files are included in the `/database` folder.
+
+**4. Run the app**
+```bash
+python main.py
+```
+
