@@ -29,5 +29,5 @@ This project processes raw CSV data, enforces strict data quality rules, and sep
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
-cd your-repo-name
+git clone https://github.com/tuse-ngumimi/health-disease-pipeline.git
+cd health-disease-pipeline
