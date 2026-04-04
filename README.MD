@@ -21,8 +21,9 @@ This project processes raw CSV data, enforces strict data quality rules, and sep
 
 1. **Extract:** The script reads raw data from `heart.csv`.
 2. **Transform (Validate):** A custom validation function checks 12 different clinical features. If a row fails any check (e.g., negative cholesterol, invalid string format), the specific error is appended to an error list.
-3. **Load:** * Clean data is bulk-inserted into the `patients` MySQL table.
-   * Invalid data, along with its error message, is inserted into the `patients_errors` MySQL table for auditing.
+3. **Load:** 
+    * Clean data is bulk-inserted into the `patients` MySQL table.
+    * Invalid data, along with its error message, is inserted into the `patients_errors` MySQL table for auditing.
 
 ## Setup and Installation
 
